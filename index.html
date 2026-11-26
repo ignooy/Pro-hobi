@@ -14,22 +14,31 @@
             </div>
             <div class = "buttons">
                 <button class="btn" id = "yesButton" onclick="nextPage()">Siim!! </button>
-                <button class="btn" id= "noButton" onmouseover="moveButton()">Não? </button>
+                <button class="btn" id= "noButton" onmouseover="gerarNovaPosicao()">Não? </button>
                 <script>
                     function nextPage() {
                         window.location.href = "yes.html";
                     }
                     
-                    function moveButton() {
-                        var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth);
-                        var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight);
-                        var z = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth);
-                        var w = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight);
-                        document.getElementById('noButton').style.left = `${x}px`;
-                        document.getElementById('noButton').style.top = `${y}px`;
-                        document.getElementById('noButton').style.right = `${z}px`;
-                        document.getElementById('noButton').style.down = `${w}px`;
+                    function gerarNovaPosicao() {
+                        const larguraTela = window.innerWidth
+                        const alturaTela = window.innerHeight
+                        const larguraButton = 30
+                        const alturaButton = 50
+                            
+                        const x = Math.round(Math.random() * larguraTela - larguraButton
+                        const y = Math.round(Math.random() * alturaTela - alturaButton
+
+                        return { 
+                            x: x < 0 ? 0 : x,
+                            y: y < 0 ? 0 : y
+                        }
                     }
+                   button.addEventListener('mouseenter', e => {
+                        const { x, y } = gerarNovaPosicao()
+                        button.style.cssText = 'left: ${x}px; top: ${y}px;'
+                   })
+                       
                 </script> 
             </div>
         </div>
