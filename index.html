@@ -7,38 +7,29 @@
     <body>
         <div class="container">
             <div >
-                <h1 class = "header_text">OI, LINDO! VOCÊ ME PERDOA??</h1>
+                <h1 class = "header_text">OI, LINDO! VOCÊ MI PERDOA??</h1>
             </div>
             <div class="gif_container">
                 <img src="gato.gif" alt="Cute animated illustration" width="300px"> 
             </div>
             <div class = "buttons">
                 <button class="btn" id = "yesButton" onclick="nextPage()">Siim!! </button>
-                <button class="btn" id= "noButton" onmouseover="gerarNovaPosicao()">Não? </button>
+                <button class="btn" id= "noButton" onmouseover="moveButton()">Não? </button>
                 <script>
                     function nextPage() {
                         window.location.href = "yes.html";
                     }
                     
-                    function gerarNovaPosicao() {
-                        const larguraTela = window.innerWidth
-                        const alturaTela = window.innerHeight
-                        const larguraButton = 30
-                        const alturaButton = 50
-                            
-                        const x = Math.round(Math.random() * larguraTela - larguraButton
-                        const y = Math.round(Math.random() * alturaTela - alturaButton
-
-                        return { 
-                            x: x < 0 ? 0 : x,
-                            y: y < 0 ? 0 : y
-                        }
+                    function moveButton() {
+                        var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth);
+                        var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight);
+                        var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth);
+                        var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight);
+                        document.getElementById('noButton').style.left = `${x}px`;
+                        document.getElementById('noButton').style.top = `${y}px`;
+                        document.getElementById('noButton').style.right = `${x}px`;
+                        document.getElementById('noButton').style.down = `${y}px`;
                     }
-                   button.addEventListener('mouseenter', e => {
-                        const { x, y } = gerarNovaPosicao()
-                        button.style.cssText = 'left: ${x}px; top: ${y}px;'
-                   })
-                       
                 </script> 
             </div>
         </div>
