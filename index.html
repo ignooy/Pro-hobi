@@ -13,19 +13,27 @@
                 <img src="gato.gif" alt="Cute animated illustration" width="300px"> 
             </div>
             <div class = "buttons">
-                <button class="btn" id = "yesButton" onclick="nextPage()">Siimm! </button>
-                <button class="btn" id="noButton" onmouseover="moveButton()">Não? </button>
+                <button class="btn" id = "sim" onclick="nextPage()">Siimm! </button>
+                <button class="btn" id="nao" onmouseover="fuja()">Não? </button>
                 <script>
                     function nextPage() {
                         window.location.href = "yes.html";
                     }
                     
-                    function moveButton() {
-                        var x = Math.round(Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth);
-                        var y = Math.round(Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight);
-                        
-                        document.getElementById('noButton').style.left = `${x}px`;
-                        document.getElementById('noButton').style.top = `${y}px`;
+                    function fuja() {
+                        var botaoNao = document.getElementById("nao")
+
+                        var larguraJanela = window.innerWidth;
+                        var alturaJanela = window.innerHeight;
+
+                        var maxX = larguraJanela - botaoNao.offsetWidth;
+                        var maxY = alturaJanela - botaoNao.offsetHeight;                        
+
+                        var aleatorioX = Math.floor(Math.random() * maxX);
+                        var aleatorioY = Math.floor(Math.random() * maxY);
+
+                        botaoNao.style.left = aleatorioX + "px";
+                        botaoNao.style.top = aleatorioY + "px";
                         
                     }
                 </script> 
