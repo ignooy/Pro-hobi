@@ -7,14 +7,14 @@
     <body>
         <div class="container">
             <div >
-                <h1 class = "header_text">Oi, lindo, quer sair comigo?</h1>
+                <h1 class = "header_text">OI, LINDO! VOCÊ ME PERDOA??</h1>
             </div>
             <div class="gif_container">
                 <img src="gato.gif" alt="Cute animated illustration" width="300px"> 
             </div>
             <div class = "buttons">
-                <button class="btn" id = "yesButton" onclick="nextPage()">Simm </button>
-                <button class="btn" id="noButton" onmouseover="moveButton()">Não? </button>
+                <button class="btn" id = "yesButton" onclick="nextPage()">Siim!! </button>
+                <button class="btn" id= "noButton" onmouseover="moveButton()">Não? </button>
                 <script>
                     function nextPage() {
                         window.location.href = "yes.html";
@@ -23,7 +23,7 @@
                     function moveButton() {
                         var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth);
                         var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight);
-                        var z = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight);
+                        var z = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth);
                         var w = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight);
                         document.getElementById('noButton').style.left = `${x}px`;
                         document.getElementById('noButton').style.top = `${y}px`;
