@@ -23,7 +23,13 @@
                     function moveButton() {
                         var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth);
                         var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight);
-                        var z = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight);
+                        var z = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetWidth);
+                        var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth);
+                        var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight);
+                        var z = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetWidth);
+                        document.getElementById('noButton').style.left = `${x}px`;
+                        document.getElementById('noButton').style.top = `${y}px`;
+                        document.getElementById('noButton').style.down = `${z}px`;
                         document.getElementById('noButton').style.left = `${x}px`;
                         document.getElementById('noButton').style.top = `${y}px`;
                         document.getElementById('noButton').style.down = `${z}px`;
