@@ -7,14 +7,14 @@ body {
 }
 
 
-#botaoNao {
+#nao {
     position: absolute;
     margin-left: 150px;
     transition: 0.5s;
     
 }
 
-#yesButton {
+#sim {
     margin-right: 150px;
     
 }
